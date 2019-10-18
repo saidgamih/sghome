@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+html, body {
+    height: 100%;
+}
+body {
+    
+}
+.home {
+    width: 100%;
+    min-height: 100%; 
+    background-repeat: no-repeat;
+    background-size: 100% 100%; 
+    padding: 15px; 
+}
+.horloge {
+    width: 100%;
+    max-width: 300px;
+    color: white;
+    text-align: center;
+    margin: 40px auto 0px auto;
+    padding: 15px;
+    text-shadow: 1px 1px 5px rgb(180, 180, 180);
+    font-family: sans-serif;
+}
+#time {
+    font-size: 75px;
+}
+#date {
+    font-size: 18px;
+}
+.msg {
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    text-align: center;
+    height: 30px;
+    color: white;
+    padding: 5px;
+    font-family: sans-serif;
+    text-shadow: 1px 1px 3px rgb(110, 110, 110);
+    margin-bottom: 30px;
+    font-size: 20px;
+    font-weight: 200;
+}
+.g-search {
+    display: flex;
+    align-items: stretch;
+    background: white;
+    width: 100%;
+    max-width: 600px;
+    height: 50px;
+    margin: 20px auto;
+    overflow: hidden;
+    padding: 10px;
+    border-radius: 40px;
+    line-height: 40px;
+    box-shadow: 0px 0px 5px rgb(180, 180, 180);
+}
+.g-search img {
+    height: 100%;
+    float: left;
+    /* flex-grow: 1; */
+}
+.g-search form {
+    display: inline-block;
+    flex-grow: 10;
+    margin: 0px 10px;
+    height: 100%;
+    line-height: 100%;
+}
+.g-search form input {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border: 0;
+    outline: 0;
+    font-size: 22px;
+    color: #555;
+}
+.g-search input::placeholder {
+    color: rgb(207, 207, 207);
+}
+.apps {
+    display: flex;
+    width: 100%;
+    max-width: 600px;
+    margin: 50px auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* align-items: center; */
+}
+.apps .app {
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    margin: 15px;
+}
+.app .app-icon {
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    background: white;
+    padding: 7px;
+    border-radius: 10px;
+    margin-bottom: 7px;
+}
+.app-icon img {
+    width: 100%;
+}
+.app-name {
+    font-family: sans-serif;
+    text-shadow: 0px 0px 3px rgb(32, 32, 32);
+    font-size: 14px;
+    line-height: 18px;
+    color: white;
+}
