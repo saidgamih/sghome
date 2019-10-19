@@ -1,3 +1,4 @@
+const home = document.getElementById("home");
 const tm = document.getElementById("time");
 const dt = document.getElementById("date");
 const hello = document.getElementById("hello");
@@ -29,12 +30,16 @@ const sayHello = () => {
     console.log(hr);
     if(parseInt(hr) > 5 && parseInt(hr) < 12) {
         hello.innerText = "🔔 Good morning " + hello.getAttribute("data-user") + " !";
+        home.style.backgroundImage = "/images/bg/morning.jpg";
     } else if (parseInt(hr) >= 12 && parseInt(hr) < 18){
-        hello.innerText = "🔔 Good afternoon " + hello.getAttribute("data-user") + " !";;
+        hello.innerText = "🔔 Good afternoon " + hello.getAttribute("data-user") + " !";
+        home.style.backgroundImage = "url('/images/bg/morning.jpg')";
     } else if(parseInt(hr) >= 18 && parseInt(hr) < 9) {
         hello.innerText = "🔔 Good evening " + hello.getAttribute("data-user") + " !";
+        home.style.backgroundImage = "url(/images/bg/night.jpg)";
     } else {
         hello.innerText = "🔔 Good night " + hello.getAttribute("data-user") + " !";
+        home.style.backgroundImage = "/images/bg/night.jpg";
     }
 }
 
