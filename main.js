@@ -31,8 +31,10 @@ const sayHello = () => {
         hello.innerText = "🔔 Good morning " + hello.getAttribute("data-user") + " !";
     } else if (parseInt(hr) >= 12 && parseInt(hr) < 18){
         hello.innerText = "🔔 Good afternoon " + hello.getAttribute("data-user") + " !";;
-    } else {
+    } else if(parseInt(hr) >= 18 && parseInt(hr) < 9) {
         hello.innerText = "🔔 Good evening " + hello.getAttribute("data-user") + " !";
+    } else {
+        hello.innerText = "🔔 Good night " + hello.getAttribute("data-user") + " !";
     }
 }
 
