@@ -34,7 +34,7 @@ const sayHello = () => {
     } else if (parseInt(hr) >= 12 && parseInt(hr) < 18){
         hello.innerText = "🔔 Good afternoon " + hello.getAttribute("data-user") + " !";
         home.style.backgroundImage = "url('/images/bg/morning.jpg')";
-    } else if(parseInt(hr) >= 18 && parseInt(hr) < 9) {
+    } else if(parseInt(hr) >= 18 && parseInt(hr) < 21) {
         hello.innerText = "🔔 Good evening " + hello.getAttribute("data-user") + " !";
         home.style.backgroundImage = "url('/images/bg/night.jpg')";
     } else {
