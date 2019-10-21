@@ -1,7 +1,7 @@
 const home = document.getElementById("home");
 const tm = document.getElementById("time");
 const dt = document.getElementById("date");
-const hello = document.getElementById("hello");
+const msg = document.getElementById("msg");
 const days   = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
 const months = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"]
 
@@ -27,18 +27,17 @@ const showH = () => {
 const sayHello = () => {
     const now = new Date();
     const hr  = now.getHours().toString();
-    console.log(hr);
     if(parseInt(hr) > 5 && parseInt(hr) < 12) {
-        hello.innerText = "🔔 Good morning " + hello.getAttribute("data-user") + " !";
+        msg.innerText = "🔔 Good morning " + msg.getAttribute("data-user") + " !";
         home.style.backgroundImage = "url('/images/bg/morning.jpg')";
     } else if (parseInt(hr) >= 12 && parseInt(hr) < 18){
-        hello.innerText = "🔔 Good afternoon " + hello.getAttribute("data-user") + " !";
+        msg.innerText = "🔔 Good afternoon " + msg.getAttribute("data-user") + " !";
         home.style.backgroundImage = "url('/images/bg/morning.jpg')";
     } else if(parseInt(hr) >= 18 && parseInt(hr) < 21) {
-        hello.innerText = "🔔 Good evening " + hello.getAttribute("data-user") + " !";
+        msg.innerText = "🔔 Good evening " + msg.getAttribute("data-user") + " !";
         home.style.backgroundImage = "url('/images/bg/night.jpg')";
     } else {
-        hello.innerText = "🔔 Good night " + hello.getAttribute("data-user") + " !";
+        msg.innerText = "🔔 Good night " + msg.getAttribute("data-user") + " !";
         home.style.backgroundImage = "url('/images/bg/night.jpg')";
     }
 }
@@ -52,8 +51,11 @@ setInterval(() => {
 
 
 setTimeout(() => {
-   hello.innerText = "";
-}, 30000)
+    msg.style.height = "0px";
+    setTimeout(() => {
+        msg.style.display = "none";
+    }, 1000)
+}, 5000)
 
 // Get Favicon From Website Link
 // var getFavicon = function(link){
